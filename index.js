@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send({ hi: 'there' });
+    res.send({ hi: 'hello world' });
 });
 
 // Gte Port from Heroku, or use local
