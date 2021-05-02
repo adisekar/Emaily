@@ -3,7 +3,11 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require('../config/keys');
 const mongoose = require('mongoose');
 
+// get instance of the mongo db collection of users
 const User = mongoose.model('users');
+
+// passport automatically calls serialize and deserialize user after sucessfull callback to set cookie with id
+// the id here is the user object id (oid) in mongodb
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });

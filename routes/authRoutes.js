@@ -13,6 +13,7 @@ module.exports = (app) => {
     });
 
     app.get('/api/current_user', (req, res) => {
+        // res.send(req.session); // shows session oid of user, which passport maintains in cookie
         res.send(req.user);
     })
 };
