@@ -22,10 +22,6 @@ app.use(passport.session()); // tell passport to use cookie session
 // App passed in authRoutes which returns a function
 require('./routes/authRoutes')(app);
 
-// app.get('/', (req, res) => {
-//     res.send({ hi: 'hello world' });
-// });
-
 // Get Port from Heroku, or use local
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
